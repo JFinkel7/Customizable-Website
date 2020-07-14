@@ -1,0 +1,163 @@
+#header-link {
+  margin: 5px;
+  text-decoration: none;
+  color: #ffe29f; }
+
+#create-main-layout {
+  border: 2px solid transparent; }
+  #create-main-layout form {
+    height: auto;
+    padding: 5px;
+    margin: 5px;
+    background-color: #003152;
+    border: 2px solid transparent; }
+    #create-main-layout form .form-content {
+      margin: 5px;
+      border: 2px solid #003152; }
+    #create-main-layout form .form-input {
+      border: 2px solid #003152;
+      border-radius: 5px;
+      font-size: 25px;
+      width: 100%; }
+    #create-main-layout form #input-title {
+      background-color: #F5F5DC;
+      text-align: center;
+      height: 45px; }
+    #create-main-layout form #input-paragraph-title {
+      text-align: center;
+      background-color: #FFDFB9;
+      height: 45px; }
+    #create-main-layout form #input-paragraph-content {
+      background-color: #f8f8ff;
+      height: 215px;
+      text-align: left; }
+    #create-main-layout form #input-submit {
+      height: 50px;
+      color: #f0ffff;
+      background-color: #66BB6A; }
+
+body {
+  max-width: 1200px;
+  min-width: 600px;
+  max-height: 900px;
+  min-height: 450px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  margin: auto; }
+
+header {
+  position: relative;
+  border: transparent 2px solid;
+  background-color: #003152;
+  margin: 15px; }
+
+.content-container {
+  border: transparent solid 2px;
+  margin: 15px; }
+
+header #index-nav-layout {
+  display: flex;
+  justify-content: end; }
+  header #index-nav-layout .link-container {
+    background-color: #003152;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-color: transparent; }
+    header #index-nav-layout .link-container a {
+      border-color: black;
+      color: #f0ffff;
+      text-decoration: none; }
+      header #index-nav-layout .link-container a:hover {
+        text-orientation: sideways-left;
+        background-color: #003152;
+        color: #95E0E8; }
+
+#main-article-layout .content-container {
+  border: 2px solid red; }
+#main-article-layout #article-paragraph-title-layout {
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align: center; }
+#main-article-layout #article-paragraph-content-layout {
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align: left; }
+
+header h1 {
+  color: #f0ffff;
+  text-align: center;
+  font-size: 45px; }
+header #dash-board-nav {
+  display: flex;
+  justify-content: right; }
+  header #dash-board-nav a {
+    margin-right: 5px;
+    color: #8A2BE2;
+    text-decoration: none; }
+
+#dashboard-main-layout {
+  padding: 15px;
+  margin: 15px;
+  margin-top: 50px;
+  background-color: #003152; }
+  #dashboard-main-layout #dashboard-grid-layout {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%; }
+    #dashboard-main-layout #dashboard-grid-layout .dashboard-grid-item {
+      border-radius: 2px;
+      box-shadow: 2px 2px 2px 2px;
+      margin: 10px;
+      height: 250px;
+      background-color: #0E4D92; }
+      #dashboard-main-layout #dashboard-grid-layout .dashboard-grid-item h2 {
+        font-size: 40px;
+        color: #f0ffff;
+        text-align: center;
+        position: relative;
+        top: 80px; }
+        #dashboard-main-layout #dashboard-grid-layout .dashboard-grid-item h2 a {
+          text-decoration: none;
+          color: #f0ffff; }
+          #dashboard-main-layout #dashboard-grid-layout .dashboard-grid-item h2 a:hover {
+            color: #E4D09C; }
+
+#main-article-layout-wrapper {
+  border: red 2px solid;
+  background-image: url("Images/background_blank_paper.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+#article-title {
+  text-align: center;
+  font-size: 45px; }
+
+#article-paragraph-title {
+  text-align: left;
+  margin-left: 50px; }
+
+#article-paragraph-content {
+  text-align: left;
+  margin-left: 25px; }
+
+#article-table-layout {
+  background-color: #003152;
+  border: transparent 2px red;
+  padding: 15px;
+  margin: 15px;
+  font-size: 20px; }
+  #article-table-layout tr {
+    background-color: #FFFFFF;
+    color: #588BAE;
+    font-weight: 900; }
+  #article-table-layout td {
+    border: 5px ridge transparent;
+    color: #000000; }
+  #article-table-layout a {
+    text-decoration: none;
+    color: #003152; }
+    #article-table-layout a:hover {
+      color: #7C0A02; }
+
+/*# sourceMappingURL=main.css.map */

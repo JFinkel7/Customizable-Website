@@ -1,0 +1,42 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<MainActivity.Models.ArticleContent>
+<link href="@Url.Content("~/Styles/css/main.css")" rel="stylesheet" type="text/css" />
+
+
+<!-- Title -->
+<h1>@ViewBag.Tittle</h1>
+
+
+<!-- How To Use Table With Models -->
+<table id="article-table-layout" border="1">
+    <!-- Table Row -->
+    <tr class="table-row">
+        <!-- Table Header -->
+        <th>ID</th>
+        <th>Tittle</th>
+        <th>Paragraph</th>
+        <th>Action</th>
+        <th>Option</th>
+    </tr>
+    @if (Model != null) {
+        @foreach (var content in Model) {
+            <tr class="table-row" style="width:100%">
+                <!-- Table Data -->
+                <td>@content.ID</td>
+                <td>@content.Title</td>
+                <td>@content.ParagraphContent</td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@content.ID">Delete</a>
+                </td>
+                <td>
+                    <a asp-action="Save" asp-route-id="@content.ID">Assign</a>
+                </td>
+            </tr>
+        }
+    }
+</table>
+
+
+
+
+

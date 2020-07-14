@@ -1,0 +1,72 @@
+@import "_Mixins.scss";
+@import "_Colors.scss";
+
+
+
+    #header-link {
+        margin:5px;
+        text-decoration: none;
+        color: $yellow_Beige;
+    }
+
+
+
+// Main
+#create-main-layout {
+    @include testBorder(transparent);
+    // - [Form]
+    form {
+        height: auto;
+        padding: 5px;
+        margin: 5px;
+        background-color: $blue_Prussian;
+        @include testBorder(transparent);
+        // Div
+        .form-content {
+            margin: 5px;
+            @include testBorder($blue_Prussian);
+        }
+        // Inputs
+        .form-input {
+            @include testBorder($blue_Prussian);
+            border-radius: 5px;
+            font-size: 25px;
+            width: 100%;
+        }
+        // Title
+        #input-title {
+            background-color: $orange_Beige;
+            text-align: center;
+            height: 45px;
+        }
+        // Paragraph Tittle
+        #input-paragraph-title {
+            text-align: center;
+            background-color: $orange_WhiteBeige0;
+            height: 45px;
+        }
+        // Paragraph Content
+        #input-paragraph-content {
+            background-color: $GhostWhite;
+            height: 215px;
+            text-align: left;
+        }
+        // Submit
+        #input-submit {
+            height: 50px;
+            color: $Azure;
+            background-color: $green_AquaDark0;
+        }
+    }
+    // CLASS ENDS
+}
+
+
+
+// Footer
+
+
+// <============================[END]============================>
+
+
+

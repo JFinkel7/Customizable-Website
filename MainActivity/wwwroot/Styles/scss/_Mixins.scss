@@ -1,0 +1,24 @@
+@import "Colors.scss";
+
+// * Mixins *
+@mixin testBorder($color) {
+    border: 2px solid $color;
+}
+
+@mixin configBody_Weight_Height() {
+    max-width: 1200px;
+    min-width: 600px;
+    max-height: 900px;
+    min-height: 450px;
+}
+
+@mixin boxShadowRadiusEffect(){
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px 2px;
+}
+
+@mixin contentContainer(){
+    // For Testing
+    border:transparent solid 2px;
+    margin:15px;
+}

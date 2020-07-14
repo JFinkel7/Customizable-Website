@@ -1,0 +1,198 @@
+@import "_Mixins.scss";
+@import "_Colors.scss";
+@import "Create.scss";
+
+// <============================ GLOBAL ATTRIBUTES ========================>
+body {
+    @include configBody_Weight_Height();
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin: auto;
+}
+
+header {
+    position: relative;
+    border: transparent 2px solid;
+    background-color: $blue_Prussian;
+    margin: 15px;
+}
+
+// All Content Containers
+.content-container {
+    @include contentContainer();
+}
+
+// <==============================[Index.cshtml]==============================>
+header {
+    #index-nav-layout {
+        //position: relative;
+        //bottom: 25px;
+        //@include testBorder(orange);
+        display: flex;
+        justify-content: end;
+
+
+
+        .link-container {
+            background-color: $blue_Prussian;
+            //@include testBorder($Black);
+            margin-right: 5px;
+            margin-left: 5px;
+            border-color: transparent;
+
+
+            a {
+                border-color: black;
+                color: $Azure;
+                text-decoration: none;
+
+                &:hover {
+                    text-orientation: sideways-left;
+                    background-color: $blue_Prussian;
+                    color: $blue_AquamarineLight;
+                }
+            }
+        }
+    }
+}
+
+
+// Main
+#main-article-layout {
+    .content-container {
+        @include testBorder(red);
+    }
+
+    #article-paragraph-title-layout {
+        background-color: $Black;
+        color: $White;
+        text-align: center;
+    }
+
+    #article-paragraph-content-layout {
+        background-color: $Black;
+        color: $White;
+        text-align: left;
+    }
+}
+// <============================[Dashboard.cshtml]============================>
+header {
+
+    h1 {
+        color: $Azure;
+        text-align: center;
+        font-size: 45px;
+    }
+    //* Logout Container
+    #dash-board-nav {
+        display: flex;
+        justify-content: right;
+
+        a {
+            margin-right: 5px;
+            color: $purple_BlueViolet;
+            text-decoration: none;
+        }
+    }
+}
+
+
+// Dashboard Main Layout
+#dashboard-main-layout {
+    padding: 15px;
+    margin: 15px;
+    margin-top: 50px;
+    background-color: $blue_Prussian;
+
+
+    #dashboard-grid-layout {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100%;
+
+
+
+        .dashboard-grid-item {
+            @include boxShadowRadiusEffect();
+            margin: 10px;
+            height: 250px;
+            background-color: $blue_Yale;
+
+            h2 {
+                font-size: 40px;
+                color: $Azure;
+                text-align: center;
+                position: relative;
+                top: 80px;
+                // Links To Views/Project
+                a {
+                    text-decoration: none;
+                    color: $Azure;
+
+                    &:hover {
+                        color: $paperOrange_Beige;
+                    }
+                }
+            }
+        }
+    }
+}
+// <============================[Shared/_Show.cshtml]============================>
+#main-article-layout-wrapper {
+    border: red 2px solid;
+    background-image: url("Images/background_blank_paper.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#article-title {
+    text-align: center;
+    font-size: 45px;
+}
+
+
+#article-paragraph-title {
+    text-align: left;
+    margin-left: 50px;
+}
+
+
+#article-paragraph-content {
+    text-align: left;
+    margin-left: 25px;
+}
+
+
+// <============================[Shared/_Edit.cshtml]============================>
+#article-table-layout {
+    background-color: $blue_Prussian;
+    border: transparent 2px red;
+    padding: 15px;
+    margin: 15px;
+    font-size: 20px;
+
+    tr {
+        background-color: $White;
+        color: $blue_AirForce;
+        font-weight: 900;
+    }
+
+    td {
+        border: 5px ridge transparent;
+        color: $Black;
+    }
+
+    a {
+        text-decoration: none;
+        color: $blue_Prussian;
+
+        &:hover {
+            color: $red_Barn;
+        }
+    }
+}
+// <============================[END]============================>
+
+
+

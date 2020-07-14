@@ -1,0 +1,18 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model MainActivity.Models.ArticleContent
+
+
+
+<link href="@Url.Content("~/Styles/css/main.css")" rel="stylesheet" type="text/css" />
+
+
+
+<h4 hidden>@Html.DisplayFor(model => model.ID)</h4>
+
+<section id="main-article-layout-wrapper">
+    <h1 id="article-title">@Html.DisplayFor(model => model.Title)</h1>
+
+    <h2 id="article-paragraph-title">@Html.DisplayFor(model => model.ParagraphTitle)</h2>
+
+    <p id="article-paragraph-content">@Html.DisplayFor(model => model.ParagraphContent)</p>
+</section>

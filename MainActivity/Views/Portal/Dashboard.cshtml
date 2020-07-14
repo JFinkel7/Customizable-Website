@@ -1,0 +1,72 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<html lang="en">
+<head>
+    <meta name="keywords" content="HTML,CSS,SCSS,Javascript" />
+    <meta name="description" content="?" />
+    <meta name="author" content="Denis J Finkel" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/css/main.css" />
+    <title>Dashboard Page</title>
+</head>
+<body>
+    <!--HEADER-->
+    <header>
+        <div id="header-main-content">
+            <h1>
+                Welcome  @ViewBag.Administrator.Name
+            </h1>
+            <nav id="dash-board-nav">
+                <a asp-action="Logout" asp-controller="Account">Logout  @ViewBag.Administrator.Email</a>
+            </nav>
+        </div>
+    </header>
+
+    <hr />
+
+
+    <!--MAIN-->
+    <main id="dashboard-main-layout">
+        <!-- Dashboard Grid Layout -->
+        <section id="dashboard-grid-layout">
+
+
+            <!--Create Article-->
+            <div class="dashboard-grid-item">
+
+                <h2>
+                    <a asp-action="Create" asp-controller="Portal">Create Article's</a>
+                </h2>
+            </div>
+
+
+            <!--Details-->
+            <div class="dashboard-grid-item">
+                <h2>
+                    <a href="#">Unavailable</a>
+                </h2>
+            </div>
+
+
+            <!--Edit Article-->
+            <div class="dashboard-grid-item">
+                <h2>
+                    <a asp-action="Edit" asp-controller="Portal">Edit Article's</a>
+                </h2>
+            </div>
+        </section>
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+        <distributed-cache name="my-distributed-cache-unique-key-101">
+            Time Inside Cache Tag Helper: @DateTime.Now
+        </distributed-cache>
+    </footer>
+
+</body>
+</html>
+
+
+
+

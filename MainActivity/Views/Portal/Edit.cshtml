@@ -1,0 +1,34 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<MainActivity.Models.ArticleContent>
+
+<html lang="en">
+<head>
+    <meta name="keywords" content="HTML,CSS,SCSS,Javascript" />
+    <meta name="description" content="?" />
+    <meta name="author" content="Denis J Finkel" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/css/main.css" />
+    <title>Edit</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Edit Your Article</h1>
+        <a id="header-link" asp-action="Dashboard">←Back</a>
+    </header>
+    <hr />
+
+
+    <main>
+        <!-- NOTE: Save The Data To JSON And Then Load The JSON Data To The Home Controller To Be Rendered-->
+        @await Html.PartialAsync("_Edit", Model)
+
+        <p>@ViewBag.Result</p>
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
+
+</body>
+</html>

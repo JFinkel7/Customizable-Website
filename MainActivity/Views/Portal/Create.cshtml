@@ -1,0 +1,59 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model MainActivity.Models.ArticleContent
+
+<html lang="en">
+<head>
+    <meta name="keywords" content="HTML,CSS,SCSS,Javascript"/>
+    <meta name="description" content="?" />
+    <meta name="author" content="Denis J Finkel" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/css/main.css" />
+    <title>Create</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Create Your Article</h1>
+        <a id="header-link" asp-action="Dashboard">←Back</a>
+    </header>
+    <hr />
+
+
+    <!-- Main -->
+    <main id="create-main-layout">
+        <form asp-controller="Portal" asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly"></div>
+
+            <!--Article Title-->
+            <div class="form-content">
+                <span asp-validation-for="Title"></span>
+                <input asp-for="Title" placeholder="Title" class="form-input" id="input-title" />
+            </div>
+
+            <!--Paragraph Title-->
+            <div class="form-content">
+                <span asp-validation-for="ParagraphTitle"></span>
+                <input asp-for="ParagraphTitle" placeholder="ParagraphTitle" class="form-input" id="input-paragraph-title" />
+            </div>
+
+            <!--Paragraph Content-->
+            <div class="form-content">
+                <span asp-validation-for="ParagraphContent"></span>
+                <textarea asp-for="ParagraphContent" rows="4" cols="50" placeholder="Paragraph" class="form-input" id="input-paragraph-content" style="resize: none;"></textarea>
+            </div>
+
+            <!--[Submit]-->
+            <div class="form-content">
+                <input type="submit" value="Save" class="form-input" id="input-submit" />
+            </div>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <h3>Footer Goes Here...</h3>
+    </footer>
+
+</body>
+</html>

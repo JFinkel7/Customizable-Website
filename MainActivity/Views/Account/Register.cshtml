@@ -1,0 +1,22 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model MainActivity.Models.Company
+<h1>Register</h1>
+<hr />
+<form asp-action="Index" asp-controller="Home">
+    <h2>Create Your Account</h2>
+    <div asp-validation-summary="All"></div>
+    <!--Name-->
+    <span asp-validation-for="Administrator.Name"></span>
+    <input asp-for="Administrator.Name" placeholder="Name" /><br />
+    <!--Email-->
+    <span asp-validation-for="Administrator.Email"></span>
+    <input asp-for="Administrator.Email" placeholder="Email" /><br />
+    <!--Password-->
+    <span asp-validation-for="Administrator.Password"></span>
+    <input asp-for="Administrator.Password" placeholder="Password" /><br />
+    <!--Role-->
+    <span asp-validation-for="Administrator.Role"></span>
+    <input asp-for="Administrator.Role" placeholder="Assigned Role" /><br />
+    <!--Input-->
+    <input type="submit" value="Register" asp-action="Register" />
+</form>

@@ -1,0 +1,50 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model MainActivity.Models.ArticleContent
+
+<html lang="en">
+<head>
+    <meta name="keywords" content="HTML,CSS,SCSS,Javascript" />
+    <meta name="description" content="?" />
+    <meta name="author" content="Denis J Finkel" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/css/main.css" />
+    <title>Index</title>
+</head>
+<body>
+    <!-- Header -->
+    <header W class="prime-layouts">
+        <h1 class="display-title">@Html.DisplayFor(article => article.Title)</h1>
+        <nav id="index-nav-layout">
+            <!--To Dashboard View-->
+            <span class="link-container">
+                <a asp-action="Dashboard" asp-controller="Portal">Dashboard</a>
+            </span>
+
+            <!--To Login View-->
+            <span class="link-container">
+                <a asp-action="Login" asp-controller="Account">Login</a>
+            </span>
+            <!--To Register View-->
+            <span class="link-container">
+                <a asp-action="Register" asp-controller="Account">Register</a>
+            </span>
+
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main id="main-article-layout">
+        <!-- Article Paragraph Title -->
+        <section id="article-paragraph-title-layout" class="content-container">
+            <h2>@Html.DisplayFor(article => article.ParagraphTitle)</h2>
+        </section>
+        <!-- Article Paragraph Content -->
+        <section id="article-paragraph-content-layout" class="content-container">
+            <h3>@Html.DisplayFor(article => article.ParagraphContent)</h3>
+        </section>
+    </main>
+
+
+</body>
+</html>

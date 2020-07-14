@@ -1,0 +1,27 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model MainActivity.Models.ArticleContent
+<form asp-controller="Portal" asp-action="Save" method="post">
+
+    <div asp-validation-summary="All"></div>
+    <!--Article Title-->
+    <div>
+        <span asp-validation-for="Title"></span>
+        <input asp-for="Title" placeholder="Title" />
+    </div>
+    <!--Paragraph Content-->
+    <div>
+        <span asp-validation-for="ParagraphContent"></span>
+        <input asp-for="ParagraphContent" placeholder="Paragraph" />
+    </div>
+
+    <!--[Submit]-->
+    <div>
+        <input type="submit" value="Save" />
+        <!--Action Will Render The Partial View-->
+    </div>
+
+</form>
+
+
+
+
